@@ -104,7 +104,6 @@ export default class HonoWorkerAdapter {
      */
     static async buildRequest(req) {
         const url = HonoWorkerAdapter.routeRewrite(new URL(req.url), req.param("rest"));
-        console.log(url.toString());
         const method = req.method;
         let bodyBytes;
         switch (method) {
